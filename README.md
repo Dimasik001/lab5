@@ -37,7 +37,7 @@
 
 ----------------------------------------------------
 function func1() {
-   // Создайте пустой объект user.
+// Создайте пустой объект user.
 var user = {};
 // Добавьте свойство name со значением John.
 user.name = 'John';
@@ -50,7 +50,6 @@ delete user.name;
 // Выведите объект user в alert.
 alert(JSON.stringify(user));
 }
-
 function func2() {
     function isEmpty(obj) {
         for (let key in obj) {
@@ -63,7 +62,6 @@ function func2() {
       schedule["8:30"] = "get up";
       alert(isEmpty(schedule)); // false
 }
-
 function func3() {
     const user = {
         name: "John"
@@ -73,7 +71,6 @@ function func3() {
       
       alert(user.name); 
 }
-
 function func4() {
     let salaries = {
         John: 100,
@@ -90,7 +87,6 @@ function func4() {
         alert("Сумма зарплат: " + sum);
       }
 }
-
 function func5() {
     function multiplyNumeric(obj) {
         for (let key in obj) {
@@ -110,7 +106,6 @@ function func5() {
       alert("height: " + menu.height); // Выведет 600
       alert("title: " + menu.title); // Останется без изменений ("My menu")
 }
-
 function func6() {
     let fruits = ["Яблоки", "Груша", "Апельсин"];
     // Добавляем новое значение в "копию" (на самом деле, это один и тот же массив)
@@ -119,8 +114,6 @@ function func6() {
     // Длина массива fruits теперь равна 4
     alert(fruits.length); // Выведет 4
 }
-
-
 function func7() {
     let styles = ["Джаз", "Блюз"];
     // Добавляем "Рок-н-ролл" в конец
@@ -136,7 +129,6 @@ function func7() {
     // Выводим обновленный массив в `alert`
     alert("Обновленный массив: " + styles.join(", "));
 }
-
 function func8() {
     let arr = ["a", "b"];
 arr.push(function() {
@@ -144,8 +136,6 @@ arr.push(function() {
 });
 arr[2]();
     }
-
-
 function func9() {
     function sumInput() {
         let numbers = [];
@@ -169,27 +159,20 @@ function func9() {
       let result = sumInput();
       alert("Сумма введенных чисел: " + result);
 }
-
-
 function func10() {
     function getMaxSubSum(arr) {
         let maxSum = 0; // Инициализируем максимальную сумму
         let currentSum = 0; // Инициализируем текущую сумму
-      
         for (let number of arr) {
           currentSum = Math.max(number, currentSum + number);
           maxSum = Math.max(maxSum, currentSum);
         }
-      
         return maxSum;
-      }
-      
+      }   
       let arr = [1, -2, 3, 4, -9, 6];
       let result = getMaxSubSum(arr);
       alert("Максимальная сумма подмассива: " + result); 
 }
-
-
 function func11() {
     function removeDuplicates(arr) {
         let count = {}; // Создаем объект для подсчета количества встречающихся чисел
@@ -203,60 +186,41 @@ function func11() {
             i--; // Уменьшаем индекс, чтобы не пропустить следующий элемент после удаления
           }
         }
-      }
-      
+      } 
       let arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
       removeDuplicates(arr);
       console.log(arr);
-   
     }
-
     function func12() {
 for (let i = 0; i < 5; i++) alert( i ); //0-5
-
 for (let i = 0; i < 5; ++i) alert( i ); //0-4
     }
-    
     function func13() {
        // Ваш массив
 const massive = [1, -2, 3, -4, 5, -6, 7, -8, 9];
-
-
 let сумма = 0;
-
-
 for (let i = 0; i < massive.length; i++) {
-
   if (massive[i] < 0) {
     сумма += massive[i];
   }
 }
-
 // Выводим результат
 alert('Сумма отрицательных элементов массива: ' + сумма);
        }
-
-
 function func14() {
-
 const massive = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 let произведение = 1;
-
 for (let i = 1; i < massive.length; i += 2) {
   произведение *= massive[i];
 }
 alert('Произведение элементов массива с нечетными номерами: ' + произведение);
 }
-
 function func15() {
 // Ваш массив
 const massive = [1, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
-
 let oneziro = -1;
 let twozero = -1;
 let sum = 0;
-
 for (let i = 0; i < massive.length; i++) {
   if (massive[i] === 0) {
     if (oneziro === -1) {
@@ -276,44 +240,31 @@ if (oneziro !== -1 && twozero !== -1) {
 }
 }
 function func16() {
-  
 const massive = [10, 5, 20, 8, 15, 30, 25, 12];
-
 let bigelement = massive[0];
-
 for (let i = 1; i < massive.length; i++) {
   if (massive[i] > bigelement) {
     bigelement = massive[i];
   }
 }
-
 alert('Наибольший элемент в массиве: ' + bigelement);
-  }
-  
-    
+  } 
 function func17() {
 const massive = [11, 7, 15, 2, 9, 6, 8, 10, 4];
-
 let naimchet = Infinity;
 let pervelement = massive[0];
-
 for (let i = 0; i < massive.length; i++) {
   if (massive[i] % 2 === 0 && massive[i] < naimchet) {
     naimchet = massive[i];
   }
 }
-
 if (naimchet === Infinity) {
   naimchet = pervelement;
 }
-
 alert('Наименьший четный элемент массива: ' + naimchet);
 }
-
 function func18() {
-
 const massive = [3, 0, 1, 0, 2, 0, 4, 5, 0, 6];
-
 function sortzero(arr) {
   return arr.sort((a, b) => {
     if (a === 0 && b !== 0) return -1;
@@ -321,19 +272,15 @@ function sortzero(arr) {
     return 0;
   });
 }
-
 const sortmass = sortzero(massive);
-
 alert('Преобразованный массив: ' + sortmass);
 }
 function func19() {
 const massive = [10, 5, 20, 8, 15, 30, 25, 12];
-
 let minel = massive[0];
 let maxel = massive[0];
 let indexmin = 0;
 let indexmax = 0;
-
 for (let i = 1; i < massive.length; i++) {
   if (massive[i] < minel) {
     minel = massive[i];
@@ -344,18 +291,14 @@ for (let i = 1; i < massive.length; i++) {
     indexmax = i;
   }
 }
-
 const sumindex = indexmin + indexmax;
-
 alert('Сумма номеров минимального и максимального элементов: ' + sumindex);
 }
-
 function func20() {
 const arr = [10, -5, 3, -7, 2, -9];
 const minAbsValue = Math.min(...arr.map(Math.abs));
 alert(minAbsValue);
 }
-
 function func21() {
 var arr = [];
 for (var i = 0; i < 10; i++) {
@@ -367,14 +310,10 @@ firstHalf.reverse();
 // Реверс для 2-ой половины массива
 var secondHalf = arr.slice(Math.floor(arr.length / 2));
 secondHalf.reverse();
-
 // Объединяем оба реверсированных массива
 var reversedArray = firstHalf.concat(secondHalf);
-
 alert("Массив после реверса 1-й и 2-й половины: " + reversedArray);
-
 }
-
 function func22() {
 var arr = [];
 for (var i = 0; i < 12; i++) {
